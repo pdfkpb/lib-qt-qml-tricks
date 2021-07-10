@@ -1,9 +1,14 @@
-QT += qml svg
+QT += svg qml quick
 
 TEMPLATE = lib
 DEFINES += QT_QML_TRICKS_LIBRARY
 
 CONFIG += c++11
+
+INCLUDEPATH += \
+    include
+
+QML2_INCLUDE_PATH += import
 
 #########  Includes  #########
 HEADERS += \
@@ -24,8 +29,8 @@ HEADERS += \
     src/QtQmlTricks_global.h
 
 RESOURCES += \
+    import/QtQmlTricks/components.qrc \
     qtqmltricks.svg
-    import/QtQmlTricks/components.qrc
 
 DISTFILES += \
     .gitignore \
@@ -61,14 +66,12 @@ SOURCES += \
 ######### Components #########
 
 ### BitStream ###
-SOURCES += \
-    examples/BitStream/main_bitstream.cpp
-
 HEADERS += \
     src/qtbitstream.h
 
 DISTFILES += \
-    examples/BitStream/QtBitStream.pro
+    examples/BitStream/QtBitStream.pro \
+    examples/BitStream/main_bitstream.cpp
 
 
 ### CustomPolygon ###
@@ -76,65 +79,54 @@ HEADERS += \
     src/qquickpolygon.h \
 
 SOURCES += \
-    src/qquickpolygon.cpp \
-    examples/CustomPolygon/main_custompolygon.cpp
+    src/qquickpolygon.cpp
 
 RESOURCES += \
     examples/CustomPolygon/data_custompolygon.qrc
 
 DISTFILES += \
     examples/CustomPolygon/CustomPolygon.pro \
-    examples/CustomPolygon/ui_custompolygon.qml
+    examples/CustomPolygon/NGon.qml \
+    examples/CustomPolygon/main_custompolygon.cpp
 
 
 ### IconCache ###
-SOURCES += \
-    examples/IconCache/main_iconcache.cpp
-
 RESOURCES += \
     examples/IconCache/mark.svg \
     examples/IconCache/data_iconcache.qrc
 
 DISTFILES += \
     examples/IconCache/IconCache.pro \
-    examples/IconCache/ui_iconcache.qml
+    examples/IconCache/IconCache.qml \
+    examples/IconCache/main_iconcache.cpp
 
 
 ### NiceModels ###
 HEADERS += \
     examples/NiceModels/defs_nicemodels.h
 
-SOURCES += \
-    examples/NiceModels/main_nicemodels.cpp
-
 RESOURCES += \
     examples/NiceModels/data_nicemodels.qrc
 
 DISTFILES += \
     examples/NiceModels/NiceModels.pro \
-    examples/NiceModels/ui_nicemodels.qml
+    examples/NiceModels/NiceModels.qml \
+    examples/NiceModels/main_nicemodels.cpp
 
 
 ### JSONPath ###
 HEADERS += \
     src/qtjsonpath.h
 
-SOURCES += \
-    examples/JSONPath/main_jsonpath.cpp
-
 DISTFILES += \
     examples/JSONPath/QtJsonPath.pro \
+    examples/JSONPath/main_jsonpath.cpp
 
-
-
-#########  Examples  #########
 
 ### Corn COBS ###
 HEADERS += \
     src/qtcobs.h
 
-SOURCES += \
-    examples/COBS/main_cobs.cpp
-
 DISTFILES += \
+    examples/COBS/main_cobs.cpp
     examples/COBS/QtCOBS.pro

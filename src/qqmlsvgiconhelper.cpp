@@ -1,4 +1,3 @@
-
 #include "qqmlsvgiconhelper.h"
 
 #include <QUrl>

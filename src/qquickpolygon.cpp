@@ -1,4 +1,3 @@
-
 #include "qquickpolygon.h"
 
 #include <qmath.h>

@@ -1,4 +1,3 @@
-
 #include <QGuiApplication>
 #include <QQuickView>
 #include <QQmlContext>

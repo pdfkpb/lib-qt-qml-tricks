@@ -49,7 +49,7 @@ public:
 
     QVariant getValue (QString path, QVariant fallback = QVariant ()) const {
         QVariant ret;
-        QStringList list = path.split ('/', QString::SkipEmptyParts);
+        QStringList list = path.split ('/', Qt::SkipEmptyParts);
         if (!list.empty () && !m_rootNode.isUndefined () && !m_rootNode.isNull ()) {
             QJsonValue currNode = m_rootNode;
             bool error = false;

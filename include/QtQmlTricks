@@ -24,6 +24,13 @@ static void registerQtQmlTricksModule (QQmlEngine * engine) {
     qmlRegisterUncreatableType<QQmlVariantListModel> (uri, maj, min, "VariantListModel",  "!!!");
     qmlRegisterUncreatableType<QQmlObjectListModelBase> (uri, maj, min, "ObjectListModelBase",  "!!!");
 
+    qmlRegisterType(QUrl("qrc:/import/QtQmlTricks/GridContainer.qml"),          uri, maj, min, "GridContainer");
+    qmlRegisterType(QUrl("qrc:/import/QtQmlTricks/IconTextButton.qml"),         uri, maj, min, "IconTextButton");
+    qmlRegisterType(QUrl("qrc:/import/QtQmlTricks/RowContainer.qml"),           uri, maj, min, "RowContainer");
+    qmlRegisterType(QUrl("qrc:/import/QtQmlTricks/ScrollContainer.qml"),        uri, maj, min, "ScrollContainer");
+    qmlRegisterType(QUrl("qrc:/import/QtQmlTricks/SingleLineEditBox.qml"),      uri, maj, min, "SingleLineEditBox");
+    qmlRegisterType(QUrl("qrc:/import/QtQmlTricks/WrapLeftRightContanier.qml"), uri, maj, min, "WrapLeftRightContanier");
+
     if (engine) {
         engine->addImportPath ("qrc:/import");
     }

@@ -8,5 +8,6 @@
         <file>ScrollContainer.qml</file>
         <file>IconTextButton.qml</file>
         <file>SingleLineEditBox.qml</file>
+        <file>QtQmlTricks.qmltypes</file>
     </qresource>
 </RCC>

@@ -1,0 +1,47 @@
+// Sometimes tooling isn't nice... qmlplugindump never has been in my case
+import QtQuick.tooling 1.1
+
+Module {
+    Component {
+        name: "GridContainer"
+        prototype: "QQuickItem"
+        defaultProperty: "data"
+        exports: ["QtQmlTricks/GridContainer 1.0"]
+        exportMetaObjectRevisions: [0]
+    }
+    Component {
+        name: "IconTextButton"
+        prototype: "QQuickItem"
+        defaultProperty: "data"
+        exports: ["QtQmlTricks/IconTextButton 1.0"]
+        exportMetaObjectRevisions: [0]
+    }
+    Component {
+        name: "RowContainer"
+        prototype: "QQuickItem"
+        defaultProperty: "data"
+        exports: ["QtQmlTricks/RowContainer 1.0"]
+        exportMetaObjectRevisions: [0]
+    }
+    Component {
+        name: "ScrollContainer"
+        prototype: ""
+        defaultProperty: "data"
+        exports: ["QtQmlTricks/ScrollContainer 1.0"]
+        exportMetaObjectRevisions: [0]
+    }
+    Component {
+        name: "SingleLineEditBox"
+        prototype: "QQuickItem"
+        defaultProperty: "data"
+        exports: ["QtQmlTricks/SingleLineEditBox 1.0"]
+        exportMetaObjectRevisions: [0]
+    }
+    Component {
+        name: "WrapLeftRightContainer"
+        prototype: "QQuickItem"
+        defaultProperty: "data"
+        exports: ["QtQmlTricks/WrapLeftRightContainer 1.0"]
+        exportMetaObjectRevisions: [0]
+    }
+}

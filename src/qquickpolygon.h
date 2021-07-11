@@ -1,6 +1,8 @@
 #ifndef QMLPOLYGON_H
 #define QMLPOLYGON_H
 
+#include "QtQmlTricks_global.h"
+
 #include <QQuickItem>
 #include <QVariant>
 #include <QColor>
@@ -12,7 +14,7 @@
 #include <QSGGeometryNode>
 #include <QSGFlatColorMaterial>
 
-class QQuickPolygon : public QQuickItem {
+class QT_QML_TRICKS_EXPORT QQuickPolygon : public QQuickItem {
     Q_OBJECT
     Q_PROPERTY (bool         closed READ getClosed WRITE setClosed NOTIFY closedChanged) // whether last point should connect to first
     Q_PROPERTY (qreal        border READ getBorder WRITE setBorder NOTIFY borderChanged) // border width

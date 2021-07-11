@@ -1,6 +1,8 @@
 #ifndef QTBITSTREAM_H
 #define QTBITSTREAM_H
 
+#include "QtQmlTricks_global.h"
+
 #include <QByteArray>
 #include <QtGlobal>
 #include <QDebug>
@@ -14,7 +16,7 @@
 typedef unsigned int  UInt;
 typedef unsigned char Byte;
 
-template<typename T> class CheckInt {
+template<typename T> class QT_QML_TRICKS_EXPORT CheckInt {
 public:
     static const bool isInt = false;
     static bool testBit (T, UInt) { return false; }
@@ -35,7 +37,7 @@ CheckInt_SPECIALIZE (quint16);
 CheckInt_SPECIALIZE (quint32);
 CheckInt_SPECIALIZE (quint64);
 
-class QtBitStream {
+class QT_QML_TRICKS_EXPORT QtBitStream {
 public:
     explicit QtBitStream (QByteArray data)
         : m_len  (data.size () * 8)

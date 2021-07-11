@@ -1,6 +1,8 @@
 #ifndef QQMLOBJECTLISTMODEL_H
 #define QQMLOBJECTLISTMODEL_H
 
+#include "QtQmlTricks_global.h"
+
 #include <QAbstractListModel>
 #include <QByteArray>
 #include <QChar>
@@ -41,7 +43,7 @@ template<typename T> QVariantList qListToVariant (const QList<T> & list) {
     for (typename QList<_type_ *>::const_iterator it = _list_.begin (); it != _list_.end (); it++) \
         for (_type_ * _var_ = (_type_ *) (* it); _var_ != Q_NULLPTR; _var_ = Q_NULLPTR)
 
-class QQmlObjectListModelBase : public QAbstractListModel { // abstract Qt base class
+class QT_QML_TRICKS_EXPORT QQmlObjectListModelBase : public QAbstractListModel { // abstract Qt base class
     Q_OBJECT
     Q_PROPERTY (int count READ count NOTIFY countChanged)
 
@@ -75,7 +77,7 @@ signals: // notifier
     void countChanged (void);
 };
 
-template<class ItemType> class QQmlObjectListModel : public QQmlObjectListModelBase {
+template<class ItemType> class QT_QML_TRICKS_EXPORT QQmlObjectListModel : public QQmlObjectListModelBase {
 public:
     explicit QQmlObjectListModel (QObject *          parent      = Q_NULLPTR,
                                   const QByteArray & displayRole = QByteArray (),

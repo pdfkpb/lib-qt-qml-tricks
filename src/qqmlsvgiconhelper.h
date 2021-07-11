@@ -1,6 +1,8 @@
 #ifndef QQMLSVGICONHELPER_H
 #define QQMLSVGICONHELPER_H
 
+#include "QtQmlTricks_global.h"
+
 #include <QObject>
 #include <QString>
 #include <QColor>
@@ -9,7 +11,7 @@
 #include <QQmlParserStatus>
 #include <QQmlPropertyValueSource>
 
-class QQmlSvgIconHelper : public QObject, public QQmlParserStatus, public QQmlPropertyValueSource {
+class QT_QML_TRICKS_EXPORT QQmlSvgIconHelper : public QObject, public QQmlParserStatus, public QQmlPropertyValueSource {
     Q_OBJECT
     Q_INTERFACES (QQmlParserStatus)
     Q_INTERFACES (QQmlPropertyValueSource)

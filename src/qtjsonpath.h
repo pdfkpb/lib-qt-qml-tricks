@@ -1,6 +1,8 @@
 #ifndef QTJSONPATH
 #define QTJSONPATH
 
+#include "QtQmlTricks_global.h"
+
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
@@ -9,7 +11,7 @@
 #include <QString>
 #include <QVariant>
 
-class QtJsonPath {
+class QT_QML_TRICKS_EXPORT QtJsonPath {
 public:
     explicit QtJsonPath (QJsonValue & jsonVal) {
         QJsonObject jsonObj = jsonVal.toObject ();

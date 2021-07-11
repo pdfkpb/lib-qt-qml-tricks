@@ -1,9 +1,11 @@
 #ifndef QTCOBS_H
 #define QTCOBS_H
 
+#include "QtQmlTricks_global.h"
+
 #include <QByteArray>
 
-class QtCOBS {
+class QT_QML_TRICKS_EXPORT QtCOBS {
 public:
     static QByteArray encode (const QByteArray & rawData) {
         QByteArray encodedData;

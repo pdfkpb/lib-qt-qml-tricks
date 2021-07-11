@@ -1,11 +1,12 @@
 #ifndef QQMLVARIANTLISTMODEL_H
 #define QQMLVARIANTLISTMODEL_H
 
+#include "QtQmlTricks_global.h"
 #include "qqmlmodels.h"
 
 class QQmlVariantListModelPrivate;
 
-class QQmlVariantListModel : public QAbstractListModel {
+class QT_QML_TRICKS_EXPORT QQmlVariantListModel : public QAbstractListModel {
     Q_OBJECT
     Q_PROPERTY (int count READ count NOTIFY countChanged)
 
